@@ -26,7 +26,7 @@ const createTicket = async (req, res) => {
         create: seats,
       },
     },
-    include: { seats: true },
+    include: { seats: true, customer: true, screening: true },
   });
   res.json({ data: newTicket });
 };
